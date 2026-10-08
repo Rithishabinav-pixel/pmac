@@ -1,0 +1,34 @@
+.topbar{
+    padding: 8px;
+    background-color: var(--blue);
+}
+
+.topbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar ul{
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.topbar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+    
+    .topbar ul{
+    gap: 20px;
+}
+
+}

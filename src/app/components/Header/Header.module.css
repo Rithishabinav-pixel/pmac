@@ -1,0 +1,157 @@
+#header{
+    padding: 10px 0;
+    z-index: 99;
+    position: relative;
+    width: 100%;
+}
+
+
+#header.transparent{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#header.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: var(--blue);
+    padding: 10px 0;
+    animation: header 0.5s ease-in-out forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes header {
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+#header .container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+#header .container .logo img{
+    width: 235px;
+    aspect-ratio: 235 / 61;
+}
+
+#header.fixed .container .logo img{
+    width: 190px;
+}
+
+#header.transparent .container .logo img{
+    filter: invert(1) brightness(100);
+}
+
+#header .container nav,
+#header .container nav ul{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#header .container nav ul li a img{
+    width: 16px;
+    filter: invert(0) brightness(0);
+}
+
+#header.transparent .container nav ul li a img{
+    filter: invert(0) brightness(100);
+}
+
+#header .container nav ul li a{
+    align-items: center;
+    gap: 8px;
+}
+
+#header nav ul li a{
+color: black;
+}
+
+#header.transparent nav ul li a{
+    color: white;
+}
+
+
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1400px) {
+  
+    #header .container nav,
+#header .container nav ul{
+    gap: 20px;
+}
+
+}
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+ #header .container .logo img{
+    width: 150px;
+}
+
+ #header .container .mobileNav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 380px;
+    background-color: white;
+    min-height: 100vh;
+    padding: 100px 20px 20px 20px;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+ #header .container .mobileNav.open{
+    transform: translateX(0);
+ }
+
+ #header .container .mobileNav,
+ #header .container .mobileNav ul{
+flex-direction: column;
+align-items: flex-start;
+}
+
+ #header .container .mobileNav ul li a{
+    color: var(--blue);
+}
+
+   .mobileMenu_btn,
+   .mobileNav_close{
+         background: none;
+    border: none;
+    }
+
+.mobileNav_close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+   
+}
+
+.mobileNav_close img,
+ .mobileMenu_btn img{
+    width: 32px;
+}
+
+ #header.fixed .mobileMenu_btn img,
+ #header.fixed .container .logo img{
+    filter: invert(1) brightness(100);
+ }
+
+
+}

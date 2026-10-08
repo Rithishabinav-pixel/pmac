@@ -1,0 +1,20 @@
+.heroSection{
+    min-height: 700px;
+    background-color: var(--blue);
+    background-size: auto 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+}
+
+.heroSection,
+.heroSection .container{
+    display: flex;
+    align-items: center;
+}
+
+.heroSection .container .content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

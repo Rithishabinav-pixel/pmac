@@ -1,150 +1,673 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
 
-  --text-primary: #000;
-  --text-secondary: #666;
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+.heroSection{
+    background-image: url(/assets/images/hero-banner.webp);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+.heroSection::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(104deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 65.49%), rgba(211, 211, 211, 0) 50% / cover no-repeat;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+.heroSection .heroSwiper{
+    width: 100%;
+    max-width: 525px;
+    margin-left: unset;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+
+
+.heroSection .heroSwiper .slide{
+    color: white;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.heroSection .heroSwiper .slide:global(.swiper-slide-active){
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.statsSection .container{
+    align-items: center;
+    gap: 120px;
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+.statsSection .statsCounters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+.statsSection .statsCounters .stat{
+    width: calc(20% - 16px);
+    gap: 24px;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
+.statsSection .statsCounters .stat h2{
     font-size: 32px;
     line-height: 40px;
-    letter-spacing: -1.92px;
-  }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.statsSection .fancyText{
+    font-size: 40px;
+    line-height: 48px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
 }
 
-.code {
-  font-family: var(--font-geist-mono);
-  font-size: 0.9em;
-  background: color-mix(in srgb, currentColor 8%, transparent);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
+.businessSection .container,
+.engineerSection .container {
+   gap: 50px;
+}
+
+.businessSection .container .left,
+.businessSection .container .right{
+    width: calc(50% - 25px);
+    gap: 60px;
+
+}
+
+
+
+
+.businessSection .container .left img,
+.businessSection .container .right img{
+    width: 100%;
+}
+
+.manufactureSwiper .slide{
+    background-color: white;
+    justify-content: space-between;
+   
+}
+
+.manufactureSwiper .slide,
+.industriesSwiper .slide,
+.partnerSection .slide{
+ height: auto;
+    overflow: hidden;
+}
+
+.manufactureSwiper .slide h3,
+.industriesSwiper .slide a h3,
+.cababilityContainer .right h4,
+.engineerSection .container .right .card h3,
+.partnerSection .slide .content h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.manufactureSwiper .slide h3{
+    color: var(--blue);
+}
+
+.manufactureSwiper .slide .content{
+    padding: 24px;
+}
+
+.manufactureSwiper .slide .image{
+    position: relative;
+}
+
+.manufactureSwiper .slide .image::before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 0.8;
+    content: '';
+    background-color: white;
+}
+
+.manufactureSwiper .slide .image img{
+    width: 100%;
+}
+
+.manufactureSwiper .slide.first .image::before{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+
+}
+
+.manufactureSwiper .slide.first .image::before,
+.manufactureSwiper .slide.third .image::before{
+    top: -1px;
+
+}
+
+
+.manufactureSwiper .slide.second .image::before{
+        clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+        bottom: -1px;
+
+}
+
+.manufactureSwiper .slide.third .image::before{
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+
+}
+
+.manufactureSwiper .slide.second,
+.manufactureSwiper .slide.third{
+    flex-direction: column-reverse;
+}
+
+
+.manufactureSwiper .slide.third h3{
+order: 1;
+padding: 24px 24px 0 24px;
+margin-bottom: -50px;
+position: relative;
+z-index: 2;
+width: 80%;
+}
+
+
+.industriesSwiper .slide a img,
+.industriesSwiper .slide a{
+    width: 100%;
+}
+
+.industriesSwiper .slide a h3{
+    background-color: var(--blue);
+    padding: 8px 16px 24px 16px;
+    position: relative;
+
+}
+
+
+
+.industriesSwiper .slide h3::before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 0.5;
+    content: '';
+    background-color:var(--blue);
+    top: 1px;
+    transform: translateY(-100%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+
+}
+
+.cababilityContainer{
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border: solid var(--blue) 1px;
+}
+
+.cababilityContainer .left,
+.cababilityContainer .right{
+    width: 50%;
+}
+
+.cababilityContainer .right{
+    align-items: flex-end;
+}
+
+.cababilityContainer .left h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+.engineerSection .container {
+    gap: 50px;
+    border-bottom: solid white 1px;
+}
+
+.engineerSection .container .left{
+    width:calc(40% - 25px);
+}
+
+.engineerSection .container .left .image{
+    display: flex;
+    overflow: visible;
+}
+
+.engineerSection .container .left .image{
+    position: relative;
+}
+
+.engineerSection .container .left .image img{
+    width: 100%;
+}
+
+.engineerSection .container .left .image img:not(.light){
+    z-index: 2;
+   
+}
+
+
+
+.engineerSection .container .left .image img.light{
+    position: absolute;
+    z-index: 1;
+     animation: light 3s infinite alternate linear;
+    transform-origin: bottom center;
+}
+
+@keyframes light {
+    to{
+        transform: rotateX(45deg) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+
+.engineerSection .container .right{
+    width:calc(60% - 25px);
+    flex-wrap: wrap;
+    gap: 40px 140px;
+}
+
+.engineerSection .container .right .card{
+    width: calc(50% - 70px);
+}
+
+.engineerSection .container .right .card img{
+    width: 80px;
+}
+
+.engineerSection{
+    padding-bottom: 0;
+}
+
+.clientSection .container .left{
+max-width: 525px;
+}
+
+.clientsMarquee_section{
+   gap: 40px;
+   overflow: hidden;
+}
+
+.clientsMarquee_section .marqueeSingle{
+    display: flex;
+    gap: 30px;
+    min-width: fit-content;
+    animation: clients_marquee 30s infinite linear;
+}
+
+.clientsMarquee_section .marqueeSingle.reverse{
+    animation-direction: reverse;
+}
+
+.clientsMarquee_section .marqueeSingle:hover{
+    animation-play-state: paused;
+}
+
+@keyframes clients_marquee {
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.clientsMarquee_section .marqueeSingle div{
+    transition: 0.3s ease-in-out;
+}
+
+.clientsMarquee_section .marqueeSingle div img{
+    width: 190px;
+}
+
+.clientsMarquee_section .marqueeSingle div:hover{
+    transform: scale(0.95);
+}
+
+.partnerSection .slide{
+padding: 16px;
+border: solid var(--blue) 1px;
+gap: 95px;
+}
+
+.partnerSection .slide .content{
+    margin-top: auto;
+}
+
+.trustedSection .container{
+    align-items: center;
+}
+
+.trustedSection .container .left{
+   width: 42%;
+}
+
+.trustedSection .container .right{
+    width: 58%;
+    transform: scale(1.21);
+    transform-origin: top center;
+    aspect-ratio: 1010 / 558;
+}
+
+.trustedSection .container .right img{
+    width: 100%;
+}
+
+.trustedSection .container .right .mapLines{
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.trustedSection .container .right .mapLines,
+.trustedSection .container .right .mapLines svg{
+    width: 100%;
+}
+
+.trustedSection .container .right .mapLines svg{
+    height: auto;
+}
+
+/* ------------------------------- */
+
+
+.partnerSection .slide .content,
+.manufactureSwiper .slide .content,
+.cababilityContainer .right,
+.cababilityContainer .left,
+.engineerSection .container .right .card{
+    gap: 16px;
+}
+
+.trustedSection .container,
+.trustedSection .container .left,
+.partnerSection .slide .content,
+.partnerSection .slide,
+.clientsMarquee_section,
+.engineerSection .container,
+.engineerSection .container .right .card,
+.engineerSection .container .right,
+.cababilityContainer,
+.cababilityContainer .buttons,
+.cababilityContainer .left,
+.cababilityContainer .right,
+.heroSection .heroSwiper .slide,
+.heroSection .heroSwiper .slide .buttons,
+.statsSection .statsCounters .stat,
+.statsSection .container,
+.businessSection .container,
+.businessSection .container .left,
+.businessSection .container .right,
+.businessSection .container .right .content,
+.manufactureSwiper .slide,
+.manufactureSwiper .slide .content,
+.industriesSwiper .slide a{
+    display: flex;
+}
+
+
+.trustedSection .container .left,
+.heroSection .heroSwiper .slide,
+.heroSection .heroSwiper .slide .buttons,
+.statsSection .statsCounters .stat,
+.businessSection .container .right .content,
+.cababilityContainer .buttons{
+    gap: 24px;
+}
+
+.trustedSection .container .left,
+.partnerSection .slide .content,
+.partnerSection .slide,
+.clientsMarquee_section,
+.engineerSection .container .right .card,
+.cababilityContainer .left,
+.cababilityContainer .right,
+.heroSection .heroSwiper .slide,
+.statsSection .container,
+.statsSection .statsCounters .stat,
+.businessSection .container .left,
+.businessSection .container .right,
+.businessSection .container .right .content,
+.manufactureSwiper .slide,
+.manufactureSwiper .slide .content,
+.industriesSwiper .slide a{
+    flex-direction: column;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1600px) {
+
+    .trustedSection .container .right{
+    transform: scale(1);
+}
+
+    .engineerSection .container .right{
+    gap: 40px;
+}
+
+.engineerSection .container .right .card{
+    width: calc(50% - 20px);
+}
+
+.engineerSection .container .right .card img{
+    width: 60px;
+}
+
+    .clientsMarquee_section .marqueeSingle,
+    .clientsMarquee_section{
+        gap: 20px;
+    }
+
+    .clientsMarquee_section .marqueeSingle div img{
+    width: 140px;
+}
+
+
+    .statsSection .container{
+    gap: 80px;
+}
+
+
+    
+
+.trustedSection .container .left,
+.heroSection .heroSwiper .slide,
+.heroSection .heroSwiper .slide .buttons,
+.statsSection .statsCounters .stat,
+.businessSection .container .right .content,
+.cababilityContainer .buttons{
+    gap: 20px;
+}
+
+}
+
+
+@media screen and (max-width:1400px) {
+
+        .statsSection .container{
+    gap: 50px;
+}
+
+      .statsSection .fancyText{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+}
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .trustedSection .container{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .trustedSection .container .left,
+    .trustedSection .container .right{
+        width: 100%;
+    }
+
+    .engineerSection .container {
+    border-bottom: none;
+}
+
+    .manufactureSwiper .slide h3,
+.industriesSwiper .slide a h3,
+.cababilityContainer .right h4,
+.engineerSection .container .right .card h3,
+.partnerSection .slide .content h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+    .manufactureSwiper .slide.third h3{
+padding: 20px 20px 0 20px;
+}
+
+
+    .manufactureSwiper .slide .content{
+    padding: 20px;
+}
+
+    .engineerSection .container{
+        flex-direction: column;
+    }
+
+    .engineerSection .container .right,
+    .engineerSection .container .left{
+        width: 100%;
+    }
+
+    .cababilityContainer .left,
+.cababilityContainer .right{
+    width: 100%;
+}
+
+    .cababilityContainer,
+     .businessSection .container{
+        flex-direction: column;
+    }
+
+    .cababilityContainer .right,
+    .cababilityContainer .left{
+        align-items: center;
+        text-align: center;
+    }
+
+    .businessSection .container,
+      .cababilityContainer,
+      .engineerSection .container{
+    gap: 30px;
+}
+
+.businessSection .container .left,
+.businessSection .container .right{
+    width: 100%;
+    gap: 30px;
+}
+
+    .statsSection .statsCounters .stat{
+    width: calc(33.33% - 13.33px);
+}
+
+.statsSection .statsCounters .stat h2{
+    font-size: 26px;
+    line-height: 34px;
+}
+
+    .heroSection{
+        min-height: 500px;
+    }
+
+.trustedSection .container .left,
+.heroSection .heroSwiper .slide,
+.heroSection .heroSwiper .slide .buttons,
+.statsSection .statsCounters .stat,
+.businessSection .container .right .content,
+.cababilityContainer .buttons{
+    gap: 16px;
+}
+
+
+
+}
+
+
+
+/* mobile  */
+
+
+@media screen and (max-width:767px){
+
+  .trustedSection .container{
+    gap: 30px;
+  }
+
+    .clientsMarquee_section .marqueeSingle,
+      .clientsMarquee_section{
+   gap: 16px;
+}
+
+        .clientsMarquee_section .marqueeSingle div img{
+    width: 80px;
+}
+
+        /* .manufactureSwiper .slide h3,
+.industriesSwiper .slide a h3,
+.cababilityContainer .right h4,
+.engineerSection .container .right .card h3,
+.partnerSection .slide .content h3{
+    font-size: 16px;
+    line-height: 24px;
+} */
+
+    .engineerSection .container .right{
+    gap: 30px;
+}
+
+.engineerSection .container .right .card{
+    width:1000%;
+}
+
+
+
+    .cababilityContainer .right img{
+        width: 100%;
+    }
+
+    .statsSection .statsCounters .stat h2{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+      .statsSection .statsCounters .stat{
+    width: calc(50% - 10px);
+}
+
+.statsSection .statsCounters {
+    gap: 30px 20px;
+}
+
+.heroSection .heroSwiper .slide .buttons,
+.cababilityContainer .buttons{
+    flex-direction: column;
+    align-items: stretch;
+    width: fit-content;
+}
+
+.heroSection .heroSwiper .slide .buttons a,
+.cababilityContainer .buttons a{
+    width: auto;
+}
 }

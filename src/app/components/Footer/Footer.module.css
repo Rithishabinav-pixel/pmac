@@ -1,0 +1,336 @@
+#footer .cta{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+#footer .cta,
+#footer .containerWrapper .container{
+    z-index: 2;
+}
+
+#footer .containerWrapper .container,
+#footer .cta,
+#footer  .ctaContainer,
+#footer .bottomContainer ul li,
+#footer .containerWrapper{
+    position: relative;
+}
+
+#footer .common_section{
+    padding-bottom: 0;
+}
+
+#footer .cta{
+    align-items: center;
+}
+
+#footer h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#footer  .ctaContainer{
+border-bottom: solid white 1px;
+padding-bottom: 80px;
+}
+
+#footer  .ctaContainer::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1654 / 458;
+    bottom: 0;
+    left: 0;
+    background-image: url(/assets/images/footer_bg.svg);
+    background-size: cover;
+     animation: light 3s infinite alternate linear;
+transform-origin: bottom center;
+}
+
+@keyframes light {
+    to{
+        transform: rotateX(45deg) scale(1);
+        opacity: 0.5;
+    }
+}
+
+#footer .actionsContainer{
+    gap: 30px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+#footer .actionsContainer .column.logo a,
+#footer .actionsContainer .column.logo img{
+    width: 100%;
+}
+
+#footer .actionsContainer .column.logo a{
+    max-width: 350px;
+}
+
+#footer .actionsContainer .column.logo img{
+    filter: invert(1) brightness(100);
+}
+
+#footer .actionsContainer .column{
+    width: calc(25% - 22.5px);
+}
+
+#footer .actionsContainer .column ul li a,
+#footer .othersContainer .contactInfo ul li a,
+#footer .bottomContainer ul li a{
+    color: white;
+}
+
+#footer .actionsContainer .column ul li a:hover,
+#footer .othersContainer .contactInfo ul li a:hover,
+#footer .bottomContainer ul li a:hover{
+    color: var(--blue);
+}
+
+#footer .othersContainer .contactInfo ul li a{
+    align-items: baseline;
+}
+
+#footer .othersContainer .contactInfo ul li a img{
+    width: 24px;
+}
+
+#footer .othersContainer,
+#footer .bottomContainer{
+    padding: 40px 20px;
+}
+
+#footer .othersContainer{
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+}
+
+#footer .othersContainer .newsletter{
+    width: 100%;
+    max-width: 410px;
+    margin-left: auto;
+}
+
+
+
+#footer .othersContainer .newsletter form input::placeholder{
+    opacity: 1;
+    color: white;
+}
+
+#footer .othersContainer .newsletter form input:focus{
+    outline: none;
+}
+
+#footer .othersContainer .newsletter form,
+#footer .othersContainer .newsletter form input{
+    width: 100%;
+}
+
+#footer .othersContainer .newsletter form input,
+#footer .othersContainer .newsletter form button{
+    border: solid white 1px;
+}
+
+#footer .othersContainer .newsletter form input{
+    background: none;
+    padding: 16px 24px;
+    color: white;
+    border-right: none;
+}
+
+#footer .othersContainer .newsletter form button{
+    background-color: white;
+    padding: 15px 23px;
+    font-weight: 600;
+}
+
+#footer .othersContainer .newsletter form button:hover{
+    background-color: var(--blue);
+    color: white;
+}
+
+#footer .bottomContainer{
+    justify-content: space-between;
+}
+
+
+
+#footer .bottomContainer ul li:nth-child(1)::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    right: -12px;
+}
+
+#footer .containerWrapper::before,
+#footer .containerWrapper::after{
+    position: absolute;
+    content: '';
+    width: auto;
+    height: 100%;
+    aspect-ratio: 939 / 813;
+    background-image: url(/assets/images/triangle.svg);
+    background-size: cover;
+    top: 0;
+}
+
+#footer .containerWrapper::before{
+left: 0;
+    transform: translateX(-50%);
+}
+
+#footer .containerWrapper::after{
+    right: 0;
+    transform: translateX(50%);
+}
+
+/* ------------------------- */
+
+#footer .bottomContainer ul,
+#footer .bottomContainer,
+#footer .othersContainer .newsletter form,
+#footer .othersContainer .newsletter,
+#footer .othersContainer,
+#footer .othersContainer .contactInfo ul li a,
+#footer .othersContainer .contactInfo ul, 
+#footer .othersContainer .contactInfo,
+#footer .actionsContainer .column ul,
+#footer .actionsContainer .column,
+#footer .actionsContainer,
+#footer .cta,
+#footer .cta .buttons,
+#footer .cta .linkCta{
+    display: flex;
+}
+
+#footer .othersContainer .newsletter,
+#footer .othersContainer .contactInfo ul, 
+#footer .othersContainer .contactInfo,
+#footer .actionsContainer .column ul,
+#footer .actionsContainer .column,
+#footer .cta{
+    flex-direction: column;
+}
+
+#footer .bottomContainer ul,
+#footer .cta,
+#footer .cta .buttons,
+#footer .cta .linkCta{
+    gap: 24px;
+}
+
+#footer .othersContainer .newsletter,
+#footer .othersContainer .contactInfo ul li a,
+#footer .othersContainer .contactInfo ul, 
+#footer .othersContainer .contactInfo,
+#footer .actionsContainer .column ul,
+#footer .actionsContainer .column{
+    gap: 16px;
+}
+
+
+/* responsive  */
+
+
+/* laptop  */
+@media screen and (max-width:1600px){
+
+    #footer .bottomContainer ul,
+#footer .cta,
+#footer .cta .buttons,
+#footer .cta .linkCta{
+    gap: 20px;
+}
+
+}
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+    
+    #footer .othersContainer,
+    #footer .bottomContainer{
+   flex-direction: column;
+}
+
+ #footer .othersContainer{
+   gap: 30px;
+ }
+
+
+ #footer .othersContainer .newsletter{
+    margin-left: unset;
+ }
+
+        #footer .actionsContainer{
+            justify-content: center;
+            gap:30px;
+        }
+
+    #footer .actionsContainer .column{
+    width: calc(33.33% - 20px);
+}
+
+ #footer .actionsContainer .column.logo{
+width: 100%;
+ }
+
+ #footer .actionsContainer .column.logo a{
+    margin: auto;
+ }
+
+
+    #footer .bottomContainer ul,
+#footer .cta,
+#footer .cta .buttons,
+#footer .cta .linkCta,
+ #footer .bottomContainer{
+    gap: 16px;
+}
+    
+    #footer h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+}
+
+/* mobile  */
+
+
+@media screen and (max-width:767px){
+
+    #footer .cta .buttons,
+#footer .cta .linkCta{
+    flex-direction: column;
+}
+
+#footer .cta .buttons{
+    align-items: stretch;
+}
+  #footer .cta .buttons a{
+width: auto;
+text-align: center;
+justify-content: center;
+  }
+
+#footer .cta .linkCta{
+    margin-top: 14px;
+    align-items: center;
+
+}
+
+      #footer .actionsContainer .column{
+    width: 100%;
+}
+
+}
