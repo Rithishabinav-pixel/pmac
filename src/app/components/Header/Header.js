@@ -121,7 +121,7 @@ const [scrolled,setScrolled] = useState(false);
 
   </ul>
 
-<Button link="#" classname={`common_btn ${mobile || !headerStyle?"blue_btn":"white_btn"}`} text="Enquire Now"/>
+<Button link="#" classname={`common_btn ${mobile || !headerStyle || (headerStyle==="innerpage_header" && !scrolled)?"blue_btn":"white_btn"}`} text="Enquire Now"/>
 
 
 

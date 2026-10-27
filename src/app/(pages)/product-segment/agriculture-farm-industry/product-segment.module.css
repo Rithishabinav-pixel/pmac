@@ -1,0 +1,201 @@
+.heroSection .container .top_heading.content{
+    max-width: 600px;
+}
+
+.products_section .cards .card .content div,
+.products_section .cards .card .content,
+.products_section .cards .card,
+.products_section .cards,
+.about_section .container .content .specifications .card,
+.about_section .container .content .specifications,
+.about_section .container,
+.about_section .container .content{
+    display: flex;
+}
+
+.products_section .cards .card .content,
+.products_section .cards .card,
+.about_section .container .content .specifications .card,
+.about_section .container .content{
+    flex-direction: column;
+}
+
+.products_section .cards,
+.about_section .container{
+    gap: 30px;
+}
+
+.about_section .container{
+    align-items: center;
+}
+
+.about_section .container .image,
+.about_section .container .content{
+    width: 50%;
+}
+
+.about_section .container .image img{
+    width: 100%;
+}
+
+.about_section .container .content{
+    gap: 16px;
+}
+
+.about_section .container .content h3{
+    margin: 8px 0;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.about_section .container .content .specifications{
+    gap: 16px 75px ;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 400px;
+}
+
+.about_section .container .content .specifications .card{
+    width: calc(50% - 37.5px);
+    gap: 24px;
+}
+
+.about_section .container .content .specifications .card h4{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.products_section .cards{
+    flex-wrap: wrap;
+}
+
+.products_section .cards .card{
+    width: calc(33.33% - 20px);
+    background-color: white;
+}
+
+.products_section .cards .card .image{
+    position: relative;
+}
+
+.products_section .cards .card .image::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    clip-path:  polygon(0% 0%, 100% 100%, 0% 100%, 0% 100%);
+}
+
+
+.products_section .cards .card .image img{
+    width: 100%;
+}
+.products_section .cards .card .content{
+    padding: 24px;
+    gap: 8px;
+}
+
+.products_section .cards .card .content *{
+    color: var(--blue);
+}
+
+.products_section .cards .card .content h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.products_section .cards .card .content div{
+    gap: 4px;
+}
+
+.products_section .cards .card .content div p.label{
+    position: relative;
+    padding-left: 32px;
+}
+
+.products_section .cards .card .content div p.label::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+}
+
+.products_section .cards .card .content div p.weight::before{
+    background-image: url(/assets/images/weight-label.svg);
+}
+
+.products_section .cards .card .content div p.material::before{
+    background-image: url(/assets/images/material-label.svg);
+}
+
+/* responsive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+    
+    .about_section .container{
+    flex-direction: column;
+}
+
+.about_section .container .image,
+.about_section .container .content{
+    width: 100%;
+}
+
+.about_section .container .content .specifications{
+    gap: 20px 30px ;
+    max-width: 100%;
+}
+
+.about_section .container .content .specifications .card{
+    width: calc(25% - 22.5px);
+    gap: 16px;
+}
+
+.about_section .container .content h3{
+    margin: 4px 0;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.products_section .cards{
+    gap: 20px;
+}
+
+.products_section .cards .card{
+    width: calc(50% - 10px);
+}
+
+.products_section .cards .card .content h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+}
+
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+    
+    .about_section .container .content .specifications{
+    gap: 20px ;
+}
+
+.about_section .container .content .specifications .card{
+    width: calc(50% - 10px);
+}
+
+.products_section .cards .card{
+    width:100%;
+}
+
+}

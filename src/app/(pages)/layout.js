@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
 <>
         
-        <Header/>
+        <Header  headerStyle="innerpage_header"/>
         {children}
         
  </>

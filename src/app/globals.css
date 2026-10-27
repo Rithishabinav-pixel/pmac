@@ -6,7 +6,7 @@
 
 :root{
   --blue:#1A315C;
-  --container:1330px
+  --container:1330px;
 }
 
 html,body{
@@ -98,6 +98,16 @@ padding: 120px 0;
 
 .common_section_inner{
   padding: 80px 0;
+}
+
+.common_section.no_padding_top,
+.common_section_inner.no_padding_top{
+  padding-top: 0;
+}
+
+.common_section.no_padding_bottom,
+.common_section_inner.no_padding_bottom{
+  padding-bottom: 0;
 }
 
 .common_btn{
@@ -214,7 +224,7 @@ line-height: 64px;
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  max-width: 900px;
+  max-width: 750px;
 }
 
 .top_heading.left{
@@ -279,6 +289,15 @@ line-height: 44px;
 
 /* tablet  */
 @media screen and (max-width:1200px) {
+
+  .desktop_break{
+    display: none;
+  }
+
+  .top_heading.center{
+    align-items: flex-start;
+    text-align: left;
+  }
 
   .top_heading.center,
 .top_heading.left{

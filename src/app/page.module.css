@@ -549,6 +549,10 @@ padding: 20px 20px 0 20px;
         width: 100%;
     }
 
+    .engineerSection .container .right{
+        padding-bottom: 50px;
+    }
+
     .cababilityContainer .left,
 .cababilityContainer .right{
     width: 100%;

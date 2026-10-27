@@ -1,0 +1,131 @@
+.heroSection .container .content.top_heading{
+    max-width: 600px;
+}
+
+.approach_section .top_heading{
+    max-width: 750px;
+}
+
+.certificate_section .cards .card,
+.approach_section .approach_container,
+.approach_section .approach_container .image,
+.approach_section .approach_container .content ul,
+.certificate_section .cards{
+    display: flex;
+}
+
+.certificate_section .cards .card,
+.approach_section .approach_container .content ul{
+    flex-direction: column;
+}
+
+.certificate_section .cards .card,
+.approach_section .approach_container .content ul{
+    gap: 16px;
+}
+
+
+.approach_section .approach_container .image{
+    justify-content: center;
+}
+
+.approach_section .approach_container .image img{
+    width: 100%;
+    max-width: 388px;
+}
+
+.approach_section .approach_container .image,
+.approach_section .approach_container .content{
+    width: 50%;
+}
+
+.approach_section .approach_container .content ul li{
+    position: relative;
+    padding-left: 40px;
+}
+
+.approach_section .approach_container .content ul li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 24px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-image: url(/assets/images/award-list.svg);
+    background-size: cover;
+}
+
+.certificate_section .cards{
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.certificate_section .cards .card{
+    width: calc(33.33% - 20px);
+    background-color: white;
+    padding:24px;
+}
+
+.certificate_section .cards .card .icon{
+    width: 100px;
+}
+
+.certificate_section .cards .card .icon,
+.certificate_section .cards .card .validity{
+    margin-bottom: 8px;
+
+}
+
+.certificate_section .cards .card h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.certificate_section .cards .card .validity p{
+    font-weight: 600;
+}
+
+
+/* responsive  */
+
+ /* tablet */
+
+ @media screen and (max-width:1200px) {
+    .approach_section .approach_container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .approach_section .approach_container .image,
+    .approach_section .approach_container .content{
+        width: 100%;
+    }
+    .approach_section .approach_container .content.top_heading:global(.left){
+        max-width: 100%;
+    }
+
+    .certificate_section .cards{
+    gap: 20px;
+}
+
+.certificate_section .cards .card{
+    width: calc(50% - 10px);
+    padding:20px;
+}
+
+.certificate_section .cards .card h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+ }
+
+
+  /* mobile */
+
+ @media screen and (max-width:767px) {
+.certificate_section .cards .card{
+    width: 100%;
+}
+ }

@@ -1,0 +1,737 @@
+.business_section .container,
+.manufactureSwiper .slide div.weightLabel,
+.manufactureSwiper .slide,
+.manufactureSwiper .slide .content,
+.process_section .container .processCards .card .content,
+.process_section .container .processCards .card,
+.process_section .container .processCards,
+.chain_section .container,
+.engineerSection .container .left .image,
+.engineerSection .container .left,
+.video_section .videoContainer .stats .card,
+.video_section .videoContainer .stats,
+.engineerSection .container,
+.engineerSection .container .right .card,
+.engineerSection .container .right{
+    display: flex;
+}
+
+.manufactureSwiper .slide,
+.manufactureSwiper .slide .content,
+.process_section .container .processCards .card .content,
+.process_section .container .processCards .card,
+.engineerSection .container .right .card,
+.engineerSection .container .left,
+.video_section .videoContainer .stats .card{
+    flex-direction: column;
+}
+
+
+.heroSection .container .content.top_heading{
+    max-width: 550px;
+}
+
+.business_section .container .image img,
+.engineerSection .container .left .image,
+.business_section .container .image ,
+.digital_section,
+.digital_section .container,
+.video_section .videoContainer .video,
+.video_section .videoContainer {
+    position: relative;
+}
+.video_section .videoContainer .video{
+    display: flex;
+}
+
+
+.engineerSection .container .left .image img,
+.business_section .container .content img,
+.business_section .container .image img,
+.digital_section .container .mobileImg,
+.manufactureSwiper .slide .image img,
+.process_section .container .processCards .card .content,
+.chain_section .container .image,
+.chain_section .container .image img,
+.engineerSection .container .left .image img,
+.video_section .videoContainer video{
+    width: 100%;
+}
+
+.video_section .videoContainer .video::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(104deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 65.49%),rgba(211, 211, 211, 0) -0.321px 0px / 108.739% 100% no-repeat;
+}
+
+.video_section .videoContainer video{
+    height: auto;
+    aspect-ratio: 1280 / 720;
+    float: left;
+}
+
+.video_section .videoContainer .stats{
+    position: absolute;
+    bottom: 40px;
+    width: calc(100% - 80px);
+    left: 40px;
+}
+
+.video_section .videoContainer .stats{
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video_section .videoContainer .stats .card{
+    gap: 24px;
+    max-width: 250px;
+}
+
+.video_section .videoContainer .stats .card h3{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.video_section .videoContainer  .playBtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 172px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+}
+
+.video_section .videoContainer  .playBtn:has(.pause) {
+    animation: pause 2s forwards linear;
+}
+
+@keyframes pause {
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.video_section .videoContainer:hover  .playBtn{
+    opacity: 1;
+    animation: none;
+    transition: 0.3s all;
+
+}
+
+.video_section .videoContainer .playBtn span{
+    position: absolute;
+    border-radius: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    animation: play 3s infinite linear;
+    transition: 0.3s all;
+}
+
+@keyframes play {
+    from{
+        transform: translate(-50%,-50%) scale(0.5);
+        opacity: 1;
+    }
+    to{
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 0;
+    }
+
+}
+
+.video_section .videoContainer  .playBtn img{
+    position: relative;
+    z-index: 2;
+    width: 36px;
+}
+
+.video_section .videoContainer  .playBtn span:nth-of-type(1){
+animation-delay: 1s;
+}
+
+
+.video_section .videoContainer  .playBtn span:nth-of-type(3){
+animation-delay: 2s;
+
+}
+
+.engineerSection .container {
+   gap: 50px;
+}
+
+.engineerSection .container .right .card h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+
+.engineerSection .container {
+    gap: 50px;
+    border-bottom: solid white 1px;
+    align-items: flex-start;
+}
+
+.engineerSection .container .left{
+    width:calc(40% - 25px);
+    gap: 50px;
+}
+
+.engineerSection .container .left .image{
+    overflow: visible;
+}
+
+
+.business_section .container .image img:not(.light),
+.engineerSection .container .left .image img:not(.light){
+    z-index: 2;
+   
+}
+
+
+
+.business_section .container .image img.light,
+.engineerSection .container .left .image img.light{
+    position: absolute;
+    z-index: 1;
+     animation: light 3s infinite alternate linear;
+    transform-origin: bottom center;
+    left: 0;
+    bottom: 0;
+}
+
+@keyframes light {
+    to{
+        transform: rotateX(45deg) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+
+.engineerSection .container .right{
+    width:calc(60% - 25px);
+    flex-wrap: wrap;
+    gap: 40px 140px;
+}
+
+.engineerSection .container .right .card{
+    width: calc(50% - 70px);
+}
+
+.engineerSection .container .right .card img{
+    width: 80px;
+}
+
+.engineerSection{
+    padding-bottom: 0;
+}
+
+.engineerSection .container .right .card{
+    gap: 16px;
+}
+
+.chain_section{
+    padding: 50px 0 80px 0;
+}
+
+.chain_section .container{
+justify-content: space-between;
+align-items: center;
+}
+
+.chain_section .container .content{
+    width: 40%;
+}
+
+.chain_section .container .image{
+    max-width: 509px;
+}
+
+
+
+.process_section .container .processCards{
+    flex-wrap: wrap;
+    gap: 100px 30px;
+    justify-content: center;
+    position: relative;
+}
+
+.process_section .container .processCards::before{
+    position: absolute;
+    content: '';
+    width: 356px;
+    height: 292px;
+    right: 0;
+    top: 32px;
+    border: solid var(--blue) 2px;
+    clip-path:  polygon(50% 100%, 100% 100%, 100% 0%, 40% 0%);
+    border-radius: 20px;
+}
+
+.process_section .container .processCards .card{
+    width: calc(25% - 22.5px);
+    gap: 10px;
+    position: relative;
+}
+
+.process_section .container .processCards .card img{
+    width: 56px;
+}
+
+.process_section .container .processCards .card .content{
+    gap: 16px;
+    max-width: 265px;
+}
+
+.process_section .container .processCards .card::before{
+    position: absolute;
+    content: '';
+    background-image: url(/assets/images/card-arrow-dotted.svg);
+    aspect-ratio: 221 / 15;
+    height: 15px;
+    background-size: auto 100%;
+    top: 26px;
+    right: 0;
+    background-repeat: no-repeat;
+}
+
+.process_section .container .processCards .card:nth-child(2):before,
+.process_section .container .processCards .card:last-child::before{
+    background-image: url(/assets/images/card-arrow.svg);
+}
+
+.process_section .container .processCards .card:nth-child(n+5):nth-child(-n+7)::before{
+    transform: scaleX(-1);
+}
+
+.process_section .container .processCards .card:nth-child(4)::before{
+    display: none;
+}
+
+
+.manufactureSwiper .slide{
+    background-color: white;
+    justify-content: space-between;
+   
+}
+
+.manufactureSwiper .slide{
+ height: auto;
+    overflow: hidden;
+}
+
+.manufactureSwiper .slide h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.manufactureSwiper .slide h3{
+    color: var(--blue);
+}
+
+.manufactureSwiper .slide .content{
+    padding: 24px;
+}
+
+.manufactureSwiper .slide .image{
+    position: relative;
+}
+
+.manufactureSwiper .slide .image::before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 0.8;
+    content: '';
+    background-color: white;
+}
+
+
+.manufactureSwiper .slide.first .image::before,
+.manufactureSwiper .slide.third .image::before{
+        clip-path:polygon(0% 0%, 0% 100%, 100% 0%);
+
+}
+
+.manufactureSwiper .slide.first .image::before,
+.manufactureSwiper .slide.third .image::before{
+    top: -1px;
+
+}
+
+
+.manufactureSwiper .slide.second .image::before{
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+        bottom: -1px;
+
+}
+
+/* .manufactureSwiper .slide.third .image::before{
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+} */
+
+.manufactureSwiper .slide.second,
+.manufactureSwiper .slide.third{
+    flex-direction: column-reverse;
+}
+
+
+.manufactureSwiper .slide.third h3{
+order: 1;
+padding: 24px 24px 0 24px;
+margin-bottom: -50px;
+position: relative;
+z-index: 2;
+width: 80%;
+}
+
+.manufactureSwiper .slide .content{
+    gap: 16px;
+}
+
+.manufactureSwiper .slide div.weightLabel{
+    gap: 4px;
+}
+
+
+.manufactureSwiper .slide div.weightLabel p.label{
+    position: relative;
+    padding-left: 32px;
+}
+
+.manufactureSwiper .slide div.weightLabel p.label::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+}
+
+.manufactureSwiper .slide div.weightLabel p.weight::before{
+    background-image: url(/assets/images/weight-label.svg);
+}
+
+.digital_section {
+    background-image: url(/assets/images/digital-quality-bg.png);
+    background-size: auto 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.digital_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% + 150px);
+    height: 100%;
+    background-color: white;
+    clip-path:  polygon(0% 0%, 100% 0%, 80% 110%, 0% 100%);
+}
+
+.digital_section .container{
+    z-index: 2;
+}
+
+.digital_section .container .content{
+    max-width: 500px;
+    padding: 80px 0
+}
+
+.business_section{
+    padding-bottom: 0;
+}
+
+.business_section .container .image,
+.business_section .container .content{
+    width: 50%;
+}
+
+.business_section .container .content img{
+    width: 100%;
+    max-width: 73px;
+}
+
+.business_section .container .image img{
+    width: 100%;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1600px) {
+
+
+    .engineerSection .container .right{
+    gap: 40px;
+}
+
+.engineerSection .container .right .card{
+    width: calc(50% - 20px);
+}
+
+.engineerSection .container .right .card img{
+    width: 60px;
+}
+
+}
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    
+.video_section .videoContainer .playBtn{
+    width: 140px;
+}
+
+
+.video_section .videoContainer  .playBtn img{
+    width: 24px;
+}
+
+.digital_section {
+    background-image: unset;
+}
+
+.digital_section .container .content{
+    padding: 0;
+    max-width: 100%;
+}
+
+     .manufactureSwiper .slide h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+    .manufactureSwiper .slide.third h3{
+padding: 20px 20px 0 20px;
+}
+
+
+    .manufactureSwiper .slide .content{
+    padding: 20px;
+}
+
+ .business_section .container ,
+     .chain_section .container {
+        gap: 30px;
+     }
+
+     .chain_section .container{
+        align-items: flex-start;
+
+     }
+
+     .business_section .container .content,
+     .business_section .container .image,
+    .chain_section .container .content{
+    width: 100%;
+}
+
+.chain_section .container .image{
+    margin: auto;
+}
+
+    .chain_section .container,
+    .business_section .container{
+        flex-direction: column;
+    }
+
+     .video_section .videoContainer .stats{
+        background-color: var(--blue);
+    position: static;
+    width: 100%;
+    padding: 32px;
+    gap: 40px 0;
+    margin-top: 30px;
+}
+
+.video_section .videoContainer .stats .card{
+    gap: 16px;
+    max-width: 250px;
+}
+
+.video_section .videoContainer .stats .card h3{
+    font-size: 30px;
+    line-height: 38px;
+}
+
+    .process_section .container .processCards .card:nth-child(4)::before{
+    display: block;
+}
+
+    .process_section .container .processCards{
+    gap: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .process_section .container .processCards::before{
+    content: none;
+ }
+
+.process_section .container .processCards .card{
+    width: calc(50% - 10px);
+    max-width: unset;
+    padding: 40px 0;
+}
+
+.process_section .container .processCards .card:nth-child(odd){
+    padding-left: 32px;
+    transform: translateX(50%);
+}
+
+.process_section .container .processCards .card:nth-child(even){
+    padding-right: 32px;
+    transform: translateX(-50%);
+    align-items: flex-end;
+    text-align: right;
+}
+
+.process_section .container .processCards .card::before{
+    background-image: unset;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue);
+    border-radius: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.process_section .container .processCards .card::after{
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    content: '';
+    background-color: var(--blue);
+    right: -2px;
+}
+
+.process_section .container .processCards .card:nth-child(odd)::after{
+left: 0;
+}
+
+.process_section .container .processCards .card:nth-child(odd)::before{
+    left: -3px;
+}
+
+.process_section .container .processCards .card:nth-child(even)::before{
+    right: -6px;
+}
+
+
+
+    .engineerSection .container .right .card h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+ .engineerSection .container{
+        flex-direction: column;
+    }
+
+    .engineerSection .container .right,
+    .engineerSection .container .left{
+        width: 100%;
+    }
+
+    
+  .engineerSection .container{
+    gap: 30px;
+    padding-bottom: 50px;
+
+}
+
+}
+
+/* mobile  */
+
+
+@media screen and (max-width:767px){
+
+    .video_section .videoContainer .playBtn{
+    width: 90px;
+}
+
+
+.video_section .videoContainer  .playBtn img{
+    width: 18px;
+}
+
+        .video_section .videoContainer .stats{
+    width: 100%;
+    padding: 20px;
+}
+
+.video_section .videoContainer .stats .card h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.video_section .videoContainer .stats .card{
+    max-width: 100%;
+}
+
+       .process_section .container .processCards .card{
+            padding: 20px 0 20px 32px;
+            width: 100%;
+        }
+
+        .process_section .container .processCards .card .content{
+            max-width: 100%;
+        }
+
+             .process_section .container .processCards .card:nth-child(odd){
+                padding-left: 32px;
+             }
+
+    .process_section .container .processCards .card::after{
+    right: unset;
+    left: 0;
+}
+
+ .process_section .container .processCards .card::before{
+    right: unset;
+    left: -4px;
+ }
+
+
+    .process_section .container .processCards .card:nth-child(odd),
+    .process_section .container .processCards .card:nth-child(even){
+    padding-left: 32px;
+    transform: translateX(0%);
+}
+
+.process_section .container .processCards .card:nth-child(even){
+    align-items: flex-start;
+    text-align: left;
+}
+
+ .process_section .container .processCards .card{
+    width: 100%;
+ }
+
+
+.engineerSection .container .right .card{
+    width:100%;
+}
+
+}
